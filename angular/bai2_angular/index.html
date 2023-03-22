@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Nhúng thư viện Angular JS -->
+    <script src="libs/angular.min.js"></script>
+</head> 
+
+<!-- my-app là tên mình đặt -->
+<body ng-app="my-app">
+    <div ng-controller="demoController">
+        <h1>{{ welcome }}</h1>
+    </div>
+
+    <div ng-controller="infoController">
+        <button id="btn-add">Thêm</button>
+        <table border="5">
+            <tr>
+                <th>Ten</th>
+                <th>Tuoi</th>
+                <th>SDT</th>
+            </tr>
+
+            <tr>
+                <td>{{info[0].name}}</td>
+                <td>{{info[0].age}}</td>
+                <td>{{info[0].phone}}</td>
+            </tr>
+
+            <tr>
+                <td>{{info[1].name}}</td>
+                <td>{{info[1].age}}</td>
+                <td>{{info[1].phone}}</td>
+            </tr>
+
+            <tr>
+                <td>{{info[2].name}}</td>
+                <td>{{info[2].age}}</td>
+                <td>{{info[2].phone}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    function myFunc ($scope) { // luôn có tham số $scope
+        $scope.welcome = "Hello World"; // đằng sau dấu chấm (.) của $scope là biến mình tạo để render ra view (như kiểu tạo biến ấy :v)
+    }
+
+    function myInfo ($scope) {
+        $scope.name = "Tùng";
+        $scope.age = 18;
+        $scope.phone = "0396007890";
+    }
+
+    // Khai báo angular js cùng với vùng mình sử dụng
+    var app = angular.module("my-app", []);
+    // Thực hiện map hàm myFunc với vùng demoController để render dữ liệu ra
+    app.controller("demoController", myFunc);
+    // app.controller("infoController", myInfo);
+    // viết tắt
+    app.controller("infoController", ($scope) => {
+        // $scope.name = "Tùng";
+        // $scope.age = 18;
+        // $scope.phone = "0396007890";
+
+        $scope.info = [
+            {
+                name: "Nguyễn Tiến Tùng",
+                age: 18,
+                phone: "012346890"
+            },
+
+            {
+                name: "Nguyễn Tiến Tùng",
+                age: 20,
+                phone: "0123468901234"
+            },
+
+            {
+                name: "Nguyễn Tiến Tùng",
+                age: 19,
+                phone: "012346890678966"
+            }
+        ]
+    });
+</script>
+</html> 

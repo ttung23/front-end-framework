@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/aboutUs.css">
+    <link rel="stylesheet" href="assets/css/nav&header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify-content-between py-3 align-items-center">
+                <div class="logo col-md-3 col-lg-3 d-flex justify-content-between d-md-block">
+                    <nav class="navbar d-md-none d-block">
+                        <div class="container-fluid">
+                            <button class="border border-dark-subtle navbar-toggler" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                                aria-controls="offcanvasDarkNavbar">
+                                <i class="fa-solid fa-bars text-black"></i>
+                            </button>
+                            <div class="offcanvas offcanvas-start text-black" tabindex="-1" id="offcanvasDarkNavbar"
+                                aria-labelledby="offcanvasDarkNavbarLabel" style="width: 80%;">
+                                <div class="offcanvas-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Vận chuyển
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fa-solid fa-business-time"></i>
+                                                        Chuyển đồ
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fa-solid fa-bus"></i>
+                                                        Xe đưa đón
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fa-solid fa-car-side"></i>
+                                                        Cho thuê xe
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Chỗ ở
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fa-sharp fa-solid fa-gopuram"></i>
+                                                        Hà Nội
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fa-solid fa-bridge"></i>
+                                                        Sài Gòn
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Hoạt động và giải trí
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fa-solid fa-water-ladder"></i>
+                                                        Bể bơi
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fa-solid fa-paw"></i>
+                                                        Chăm sóc thú cưng
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <a href="home.html"><img src="assets/img/logo/30bf6c528078ba28d34bc3e37d124bdb.svg" alt=""></a>
+
+                    <div class="user-info col-lg-4 opacity-75 d-flex d-md-none">
+                        <button class="border-0 bg-white">
+                            <img class="m-0" src="assets/img/user/user.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="search d-none d-md-block col-md-7 col-lg-6 fixed-bottom position-static-md bg-white py-2 py-0-md text-center">
+                    <div class="d-inline-block">
+                        <div
+                            class="d-flex shadow border border-dark-subtle p-2 rounded-pill align-items-center justify-content-center-sm">
+                            <div class="px-1">
+                                <button class="border-0 bg-transparent">Anywhere</button>
+                            </div>
+
+                            <div class="border-end border-dark-subtle" style="height: 26px;">
+
+                            </div>
+
+                            <div class="px-1">
+                                <button class="border-0 bg-transparent">Any week</button>
+                            </div>
+
+                            <div class="border-end border-dark-subtle" style="height: 26px;"></div>
+
+                            <div class="px-1">
+                                <button class="border-0 bg-transparent">
+                                    <span class="opacity-50">Add guests</span>
+                                    <i class="fa-solid fa-magnifying-glass ms-1 p-2 rounded-circle text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-info col-md-2 col-lg-3 opacity-75 d-none d-md-flex">
+                    <button class="d-flex justify-content-between align-items-center">
+                        <i class="fa-solid fa-bars "></i>
+                        <img class="" src="assets/img/user/user.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="nav bg-body-secondary">
+        <div class="container">
+            <nav class="navbar navbar-expand-md p-0">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown me-5-md">
+                                <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Vận chuyển
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-business-time"></i>
+                                            Chuyển đồ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-bus"></i>
+                                            Xe đưa đón
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-car-side"></i>
+                                            Cho thuê xe
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown me-5-md">
+                                <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Chỗ ở
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-sharp fa-solid fa-gopuram"></i>
+                                            Hà Nội
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-bridge"></i>
+                                            Sài Gòn
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown me-5-md">
+                                <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hoạt động và giải trí
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-water-ladder"></i>
+                                            Bể bơi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-paw"></i>
+                                            Chăm sóc thú cưng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown me-5-md">
+                                <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sản phẩm bổ sung
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-coins"></i>
+                                            Điểm thưởng
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-gift"></i>
+                                            Phiếu quà tặng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="banner">
+            <div class="px-4" style="margin: 0 auto;">
+                <div class="row">
+                    <div class="col-md-5 col-12 pe-md-5">
+                        <p class="text-banner text-white m-0 fw-medium">
+                            Khám phá ngàn hàng lựa chọn tận hưởng cuộc sống với
+                            <span>
+                                <img src="assets/img/logo/traveloka.svg" alt="">
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="img-banner col-7 d-none d-md-block">
+                        <img width="100%" src="assets/img/banner/1667231753129-2993c7252175bca7967efaebf34b4950.webp"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h2 class="text-center fs-3 mb-5" style="line-height: 1.75;">
+                Traveloka
+                <br>
+                Sống, đậm chất riêng
+            </h2>
+
+            <div class="text-content py-3">
+                <div class="row pb-5">
+                    <div class="col-md-4 col-12 mb-3">
+                        <img width="100%" src="assets/img/banner/1667232016060-4b5babb4a860fb692d969ae3480cc6a1.webp"
+                            alt="">
+                    </div>
+
+                    <div class="col-md-8 col-12">
+                        <div class="px-md-5" style="line-height: 30px;">
+                            Traveloka là siêu ứng dụng du lịch và tiện ích sống hàng đầu
+                            Đông Nam Á, chúng tôi giúp bạn khám phá và mua đa dạng các loại
+                            sản phẩm du lịch, dịch vụ địa phương và dịch vụ tài chính. Danh mục
+                            sản phẩm toàn diện của Traveloka bao gồm các dịch vụ đặt phương tiện
+                            đi lại như vé máy bay, xe buýt, tàu hỏa, cho thuê ô tô, đưa đón sân bay,
+                            cũng như kho khách sạn chỗ ở lớn nhất Đông Nam Á. Không chỉ vậy, để
+                            giúp bạn thực hiện nhiều ước vọng về phong cách sống của mình,
+                            chúng tôi còn hoàn thiện các dịch vụ của mình với một loạt các điểm
+                            tham quan, hoạt động địa phương cũng như các spa chăm sóc sức khỏe và
+                            sắc đẹp. Vì vậy, bất kể lựa chọn lối sống của bạn là gì, bạn chỉ cần
+                            một cú nhấp chuột!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-md-8 col-12 order-1 order-md-0">
+                        <div class="px-md-5" style="line-height: 30px;">
+                            Traveloka tin rằng hạnh phúc có thể đến dưới nhiều hình thức đối với những người khác nhau
+                            trong
+                            những thời điểm khác nhau. Vì vậy, với uy tín của chúng tôi và kinh nghiệm hơn 10 năm, chúng
+                            tôi
+                            hứa hẹn với bạn một loạt các lựa chọn phong phú để thắp sáng trạng thái hạnh phúc của chính
+                            bạn.
+                            Cho dù bạn đang tìm kiếm một trải nghiệm thú vị hay nghỉ ngơi trong khu nghỉ dưỡng 5 sao,
+                            một
+                            ngày spa thư giãn hay một chuyến phiêu lưu ly kỳ, một chuyến bay hạng nhất tiện lợi hay
+                            chuyến
+                            đi đường bộ thú vị, cho cả chuyến đi trong nước và quốc tế, bạn đều có tất cả trong một ứng
+                            dụng
+                            Traveloka.
+
+                            Với dịch vụ chăm sóc khách hàng 24/7 bằng các ngôn ngữ địa phương cũng như hơn 30 phương
+                            thức
+                            thanh toán địa phương khác nhau, Traveloka đã được tải xuống hơn 100 triệu lần, trở thành
+                            ứng
+                            dụng du lịch và tiện ích sống phổ biến nhất ở khu vực Đông Nam Á.
+
+                            Bạn còn chờ gì nữa? Đặt một chuyến đi được lên kế hoạch chu đáo hoặc một kỳ nghỉ được quyết
+                            định
+                            vào phút chót với chúng tôi. Với tất cả các lựa chọn du lịch và phong cách sống độc đáo của
+                            bạn,
+                            như mọi khi, Traveloka sẽ đồng hành cùng bạn.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-12 order-0">
+                        <img width="100%" src="assets/img/banner/1667232268871-776cfde10b5577c7b2d483fb04ced52f.webp"
+                            alt="">
+                    </div>
+
+                    <div class="col-12 pt-5 order-1 order-md-0">
+                        <button
+                            class="btn-about text-white px-4 py-2 rounded-3 fw-semibold border-0 d-block m-auto">Khám
+                            phá thêm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark py-5 mt-5">
+        <div class="container pb-4">
+            <div class="row">
+                <div class="col-md-3 col-12 align-items-center d-flex">
+                    <img src="assets/img/logo/ad89f39fe62c8b500e6f9a25fa4427d8.svg" alt="">
+                </div>
+                <div class="col-md-3 col-6 text-white">
+                    <h3 class="fs-5 fw-bold">Về Traveloka</h3>
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="">
+                            Cách đặt chỗ
+                        </a>
+                    </p>
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="contact.html">
+                            Liên hệ chúng tôi
+                        </a>
+                    </p>
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="aboutUs.html">
+                            Về chúng tôi
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-6 text-white">
+                    <h3 class="fs-5 fw-bold">Khách sạn</h3>
+
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="">
+                            Hà Nội
+                        </a>
+                    </p>
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="">
+                            Sài Gòn
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-3 text-white">
+                    <h3 class="fs-5 fw-bold">Khác</h3>
+
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="">
+                            Traveloka Blog
+                        </a>
+                    </p>
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="">
+                            Quy chế hoạt động
+                        </a>
+                    </p>
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="">
+                            Điều khoản & điều kiện
+                        </a>
+                    </p>
+                    <p>
+                        <a class="more text-decoration-none text-white-50" href="">
+                            Chính sách quyền riêng tư
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous">
+    </script>
+    <script src="assets/js/libs/angular.min.js"></script>
+</body>
+
+</html>

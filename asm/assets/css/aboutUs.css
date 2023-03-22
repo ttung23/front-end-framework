@@ -1,0 +1,40 @@
+.banner {
+    background-color: #1BA0E2;
+}
+
+.banner > div {
+    width: auto;
+    padding: 20px 0;
+}
+
+.text-banner {
+    font-size: 28px;
+    line-height: 48px;
+}
+
+.text-banner img {
+    vertical-align: baseline;
+}
+
+.img-banner {
+    width: 800px;
+}
+
+.text-content {
+    padding: 0 20px;
+}
+
+.btn-about {
+    background-color: #1BA0E2;
+}
+
+@media (min-width: 768px) {
+    .banner > div {
+        width: 960px;
+        padding: 60px 0;
+    }
+
+    .text-content {
+        padding: 0 60px;
+    }
+}

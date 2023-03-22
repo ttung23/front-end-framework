@@ -1,0 +1,11 @@
+.title {
+    background: linear-gradient(-180deg, #1BA0E2 0%, #007CE8 100%);
+}
+
+.btn-mail {
+    background-color: rgba(73,179,232,1.00);
+}
+
+.detail:hover > div {
+    border-color: rgba(73,179,232,1.00) !important;
+}

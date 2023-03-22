@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Nhúng thư viện Angular JS -->
+    <script src="libs/angular.min.js"></script>
+    <script src="app.js"></script>
+</head> 
+
+<!-- my-app là tên mình đặt -->
+<body ng-app="my-app">
+    <div ng-controller="infoController">
+        <h1 ng-bind="welcome"></h1>
+        <input type="text" ng-model="test" name="" id="" placeholder="aaa">
+        
+        <h2 ng-bind="thongbao"></h2>
+        <h2 ng-bind="thongbao2"></h2>
+        <h2 ng-bind="thongbao3"></h2>
+        
+
+        <select ng-model="doibong">
+            <option value="">chon doi bong</option>
+            <option value="1">MU</option>
+            <option value="2">MC</option>
+            <option value="3">Arsenal</option>
+        </select>
+
+        <br>
+
+        Nam
+        <input ng-model="gioitinh" value="4" type="radio">
+        Nữ
+        <input ng-model="gioitinh" value="5" type="radio">
+
+        <br>
+        <button ng-click="sayHello()">haha</button>
+
+        <h1 ng-mousemove="myMouse()">Đưa chuột vào</h1>
+        {{ count }}
+        <table border="5">
+            <tr>
+                <th>Ten</th>
+                <th>Tuoi</th>
+                <th>SDT</th>
+            </tr>
+
+            <tr>
+                <td>{{info[0].name}}</td>
+                <td>{{info[0].age}}</td>
+                <td>{{info[0].phone}}</td>
+            </tr>
+
+            <tr>
+                <td>{{info[1].name}}</td>
+                <td>{{info[1].age}}</td>
+                <td>{{info[1].phone}}</td>
+            </tr>
+
+            <tr>
+                <td>{{info[2].name}}</td>
+                <td>{{info[2].age}}</td>
+                <td>{{info[2].phone}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <img width="500" class="anh" src="https://ap.poly.edu.vn/images/Banner-AP.png" alt="">
+    </div>
+</body>
+</html> 

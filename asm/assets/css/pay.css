@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-pay {
+    display: block;
+    padding: 16px 32px;
+    background-color: rgba(73,179,232,1.00);
+}
+
+.price-detail {
+    top: 40px;
+    margin-left: 80px;
+}
+
+@media(min-width: 768px) {
+    #border-md-0 {
+        border-top: unset !important;
+    }
+}

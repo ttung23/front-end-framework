@@ -1,0 +1,40 @@
+.logo img {
+    max-height: 80px;
+    margin-left: 12px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.user-info button {
+    padding: 4px 8px;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+.user-info img {
+    width: 32px;
+    margin-left: 12px;
+}
+
+li i {
+    color: #076eb3;
+}
+
+.search i {
+    background-color: #076eb3;
+}
+
+.more:hover {
+    text-decoration: underline!important;
+    color: #fff !important;
+}
+
+@media (min-width: 768px) {
+    .position-static-md {
+        position: static !important;
+    }
+}
