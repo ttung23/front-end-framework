@@ -1,0 +1,69 @@
+<!-- <div>
+    <table border="5">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Địa chỉ</th>
+        </tr>
+
+        <tr ng-repeat="value in user">
+            <td>{{ value.id }}</td>
+            <td>{{ value.name }}</td>
+            <td>{{ value.age }}</td>
+            <td>{{ value.address }}</td>
+        </tr>
+    </table>
+</div> -->
+
+<div>
+    <table>
+        <tr>
+            <td>
+                Tên:
+            </td>
+
+            <td>
+                <input type="text" ng-model="inputValue.name">
+            </td>
+
+            <td>
+                <p ng-if="checkData.name == true" style="background-color: red; color: #fff;">Nhap ten deeeeeeeeeeee</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Tuổi:
+            </td>
+
+            <td>
+                <input type="text" ng-model="inputValue.age">
+            </td>
+            
+            <td>
+                <p ng-if="checkData.age == true" style="background-color: red; color: #fff;">Chua nhap tuoi aaaaaaaaaa</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="">Địa chỉ:</label>
+            </td>
+
+            <td>
+                <input type="text" ng-model="inputValue.address">
+            </td>
+
+            <td>
+                <p ng-if="checkData.address == true" style="background-color: red; color: #fff;">Dia chi nuaaaaaaaa</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button ng-click="onSubmitForm()">Lưu</button>
+            </td>
+        </tr>
+    </table>
+</div>

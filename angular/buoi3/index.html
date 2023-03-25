@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+    <script src="controllers/HomeController.js"></script>
+    <script src="controllers/AboutController.js"></script>
+</head>
+<body>
+    <div ng-app="app-route">
+        <header>đây là vùng header</header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#!/trang-chu">Trang chủ</a>
+                </li>
+
+                <li>
+                    <a href="#!/gioi-thieu/2">Giới thiệu</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Định nghĩa nội dung của từng trang sẽ render ra -->
+            <h1>Đây là đâu?</h1>
+            <div ng-view>
+                
+            </div>
+        </main>
+
+        <footer>
+            đây là vùng footer
+        </footer>
+    </div>
+</body>
+<script src="route.js"></script>
+</html>

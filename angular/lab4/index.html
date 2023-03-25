@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+    <script src="controllers/B1p1Controller.js"></script>
+    <script src="controllers/B2p1Controller.js"></script>
+    <script src="controllers/B3p1Controller.js"></script>
+    <script src="controllers/B1p2Controller.js"></script>
+    <script src="controllers/B2p2Controller.js"></script>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div ng-app="lab4">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <h1>Phần 1</h1>
+                <ul class="d-flex list-unstyled gap-3">
+                    <li><a href="#!/b1p1">Bài 1</a></li>
+                    <li><a href="#!/b2p1">Bài 2</a></li>
+                    <li><a href="#!/b3p1">Bài 3</a></li>
+                </ul>
+            </div>
+        
+            <div>
+                <h1>Phần 2</h1>
+                <ul class="d-flex list-unstyled gap-3">
+                    <li><a href="#!/b1p2">Bài 1</a></li>
+                    <li><a href="#!/b2p2">Bài 2</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div ng-view>
+    
+        </div>
+    </div>
+</body>
+<script src="route.js"></script>
+</html>

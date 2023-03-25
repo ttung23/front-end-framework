@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+
+    <script src="route.js"></script>
+    <script src="controllers/fptController.js"></script>
+</head> 
+<body ng-app="bai-tap">
+    <div>
+        <ul>
+            <li><a href="#!/nhanVien">nhân viên</a></li>
+            <li><a href="#!/canBo">Can bo</a></li>
+            <li><a href="#!/quanLy">quan ly</a></li>
+        </ul>
+    </div>
+
+    <div ng-view>
+        
+    </div>
+
+
+</body>
+</html>

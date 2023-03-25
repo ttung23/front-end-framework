@@ -6,14 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- STYLE -->
     <link rel="stylesheet" href="assets/css/nav&header.css">
+    <link rel="stylesheet" href="assets/css/aboutUs.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/detail_room.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/pay.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/angular-route.min.js"></script>
+    <script src="route.js"></script>
+    <script src="controller/AboutUsController.js"></script>
+    <script src="controller/ContactController.js"></script>
+    <script src="controller/DetailController.js"></script>
+    <script src="controller/HomeController.js"></script>
+    <script src="controller/PayController.js"></script>
+    
 </head>
 
-<body>
+<body ng-app="asm">
+    
     <header>
         <div class="container">
             <div class="row justify-content-between py-3 align-items-center">
@@ -106,7 +125,7 @@
                             </div>
                         </div>
                     </nav>
-                    <a href="home.html"><img src="assets/img/logo/30bf6c528078ba28d34bc3e37d124bdb.svg" alt=""></a>
+                    <a href="#!/trang-chu"><img src="assets/img/logo/30bf6c528078ba28d34bc3e37d124bdb.svg" alt=""></a>
 
                     <div class="user-info col-lg-4 opacity-75 d-flex d-md-none">
                         <button class="border-0 bg-white">
@@ -115,8 +134,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="search d-none d-md-block col-md-7 col-lg-6 fixed-bottom position-static-md bg-white py-2 py-0-md text-center">
+                <div class="search col-md-7 col-lg-6 fixed-bottom position-static-md bg-white py-2 py-0-md text-center">
                     <div class="d-inline-block">
                         <div
                             class="d-flex shadow border border-dark-subtle p-2 rounded-pill align-items-center justify-content-center-sm">
@@ -257,117 +275,8 @@
         </div>
     </div>
 
-    <div class="content">
-        <div class="title text-center text-white py-4">
-            <div class="container">
-                <h2 class="fw-bold">Liên hệ chúng tôi</h2>
-                <p class="fw-bold mt-3 mb-0">Chúng tôi luôn sẵn sàng hỗ trợ, dù bạn ở bất cứ nơi đâu!</p>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row mt-5">
-                <div class="detail col-lg-3 col-md-6 col-12 mb-3">
-                    <div class="border border-secondary p-4 rounded-4">
-                        <div class="fs-5 text-primary">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </div>
-
-                        <div class="mt-4">
-                            <p class="m-0 fs-5 fw-semibold">Hotline</p>
-                            <p class="mt-2 m-0 text-secondary">0396007890</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="detail col-lg-3 col-md-6 col-12 mb-3">
-                    <div class="border border-secondary p-4 rounded-4">
-                        <div class="fs-5 text-primary">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-
-                        <div class="mt-4">
-                            <p class="m-0 fs-5 fw-semibold">Email</p>
-                            <p class="mt-2 m-0 text-secondary">tungntph25580@fpt.edu.vn</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="detail col-lg-3 col-md-6 col-12 mb-3">
-                    <div class="border border-secondary p-4 rounded-4">
-                        <div class="fs-5 text-primary">
-                            <i class="fa-regular fa-window-restore"></i>
-                        </div>
-
-                        <div class="mt-4">
-                            <p class="m-0 fs-5 fw-semibold">Website</p>
-                            <p class="mt-2 m-0 text-secondary">traveloka.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="detail col-lg-3 col-md-6 col-12 mb-3">
-                    <div class="border border-secondary p-4 rounded-4">
-                        <div class="fs-5 text-primary">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </div>
-
-                        <div class="mt-4">
-                            <p class="m-0 fs-5 fw-semibold">Hotline</p>
-                            <p class="mt-2 m-0 text-secondary">0396007890</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-md-6 col-12 mb-3 d-flex justify-content-center align-items-center">
-                    <div class="">
-                        <img width="100%" src="assets/img/banner/1542787475817-d60e6a11bee65c3e16aeb76bd6c7ae40.svg"
-                            alt="">
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-12 mb-3">
-                    <form action="">
-                        <div class="form-floating mb-3">
-                            <textarea style="min-height: 120px;" class="form-control" placeholder="L" rows="10"
-                                id="content"></textarea>
-                            <label for="content">Nội dung</label>
-                        </div>
-
-                        <div class="row g-2 mb-3">
-                            <div class="col-md">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="floatingInputGrid" placeholder="n">
-                                    <label for="floatingInputGrid">Họ</label>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="floatingInputGrid" placeholder="n">
-                                    <label for="floatingInputGrid">Tên</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-floating mb-4">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Địa chỉ Email của bạn</label>
-                        </div>
-
-                        <div class="row g-2 mb-4">
-                            <div class="col-md">
-                                <div class="form-floating">
-                                    <button class="btn-mail fs-5 border-0 rounded-2 py-2 text-white"
-                                        style="width: 100%;">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                        Gửi tin
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="content" ng-view>
+        
     </div>
 
     <footer class="bg-dark py-5 mt-5">
@@ -384,12 +293,12 @@
                         </a>
                     </p>
                     <p>
-                        <a class="more text-decoration-none text-white-50" href="contact.html">
+                        <a class="more text-decoration-none text-white-50" href="#!/lien-he">
                             Liên hệ chúng tôi
                         </a>
                     </p>
                     <p>
-                        <a class="more text-decoration-none text-white-50" href="aboutUs.html">
+                        <a class="more text-decoration-none text-white-50" href="#!/about-us">
                             Về chúng tôi
                         </a>
                     </p>
@@ -435,13 +344,9 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous">
-    </script>
-
-    <script src="assets/js/libs/angular.min.js"></script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 
 </html>

@@ -1,0 +1,66 @@
+<p>Thông tin bảo hiểm cho {{ per }}</p>
+<table>
+    <tr>
+        <td>
+            Họ tên
+        </td>
+        <td>
+            <input type="text" ng-model="inputValue.name">
+        </td>
+        <td>
+            <p ng-if="checkData.name" style="color: red;">Chưa nhập tên</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Giới tính
+        </td>
+        <td>
+            Nam
+            <input type="radio" value="1" ng-model="inputValue.gender">
+            Nữ
+            <input type="radio" value="2" ng-model="inputValue.gender">
+        </td>
+        <td>
+            <p ng-if="checkData.gender" style="color: red;">Chưa nhập tên</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Cấp bậc
+        </td>
+        <td>
+            <select ng-model="inputValue.level">
+                <option value="1">Bậc 1</option>
+                <option value="2">Bậc 2</option>
+                <option value="3">Bậc 3</option>
+            </select>
+        </td>
+        <td>
+            <p ng-if="checkData.level" style="color: red;">Chưa nhập tên</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Số ngày nằm viện
+        </td>
+        <td>
+            <input type="text" ng-model="inputValue.dayCount">
+        </td>
+        <td>
+            <p ng-if="checkData.dayCount" style="color: red;">Chưa nhập tên</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td><button ng-click="check()">Kiểm tra</button></td>
+    </tr>
+    <tr ng-if="show">
+        <td colspan="2">
+            Số tiền chi trả cho {{ result.gender }} {{ result.name }} là {{ result.tien }}
+        </td>
+    </tr>
+</table>

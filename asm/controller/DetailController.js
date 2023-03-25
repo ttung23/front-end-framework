@@ -1,0 +1,3 @@
+window.DetailController = function ($scope) {
+    
+}
