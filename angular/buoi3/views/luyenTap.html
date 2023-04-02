@@ -1,0 +1,51 @@
+<h1>Quản lý sản phẩm</h1>
+<table>
+    <tr>
+        <td>Tên sp</td>
+        <td><input type="text" ng-model="inputValue.tensp"></td>
+        <td ng-if="checkData.tensp">Chưa nhập tên sp</td>
+    </tr>
+
+    <tr>
+        <td>Số lượng</td>
+        <td><input type="number" ng-model="inputValue.soluong"></td>
+        <td ng-if="checkData.soluong">Chưa nhập số lượng</td>
+    </tr>
+
+    <tr>
+        <td>Đơn giá</td>
+        <td><input type="text" ng-model="inputValue.dongia"></td>
+        <td ng-if="checkData.dongia">Chưa nhập đơn giá</td>
+    </tr>
+
+    <tr>
+        <td>Trạng thái</td>
+        <td>
+            <select ng-model="inputValue.trangthai">
+                <option value="0">Kích hoạt</option>
+                <option value="1">Không kích hoạt</option>
+            </select>
+        </td>
+        <td ng-if="checkData.trangthai">Chưa chọn trạng thái</td>
+    </tr>
+</table>
+<button ng-click="onSubmit()">Lưu</button>
+<table border="5">
+    <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Số lượng</th>
+        <th>Đơn giá</th>
+        <th>Trạng thái</th>
+        <th>Tổng tiền</th>
+    </tr>
+
+    <tr ng-repeat="ds in danhsach">
+        <td>{{ ds.id }}</td>
+        <td>{{ ds.tensp }}</td>
+        <td>{{ ds.soluong }}</td>
+        <td>{{ ds.dongia }}</td>
+        <td>{{ ds.trangthai == 0 ? "Kích hoạt" : "Ko kích hoạt" }}</td>
+        <td>{{ ds.soluong * ds.dongia }}</td>
+    </tr>
+</table>

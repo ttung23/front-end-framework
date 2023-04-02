@@ -12,12 +12,12 @@ app.config(function ($routeProvider) {
             controller: HomeController,
             title: "Trang chủ"
         })
-        .when('/chi-tiet', {
+        .when('/chi-tiet/:id', {
             templateUrl: "views/detail.html",
             controller: DetailController,
             title: "Chi tiết phòng"
         })
-        .when('/thanh-toan', {
+        .when('/thanh-toan/:id', {
             templateUrl: "views/pay.html",
             controller: PayController,
             title: "Thanh toán"

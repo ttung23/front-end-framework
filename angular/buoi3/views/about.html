@@ -46,7 +46,7 @@
             </td>
         </tr>
 
-        <tr>
+        <!-- <tr>
             <td>
                 <label for="">Địa chỉ:</label>
             </td>
@@ -58,12 +58,27 @@
             <td>
                 <p ng-if="checkData.address == true" style="background-color: red; color: #fff;">Dia chi nuaaaaaaaa</p>
             </td>
-        </tr>
+        </tr> -->
 
         <tr>
             <td>
                 <button ng-click="onSubmitForm()">Lưu</button>
             </td>
+        </tr>
+    </table>
+    <table border="5">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+        </tr>
+
+        <tr ng-repeat="ds in danhsach">
+            <td>{{ ds.id }}</td>
+            <td>{{ ds.name }}</td>
+            <td>{{ ds.age }}</td>
+            <td><button ng-click="onEdit(ds.id)">Sửa</button></td>
+            <td><button ng-click="onDelete(ds.id)">Xóa</button></td>
         </tr>
     </table>
 </div>

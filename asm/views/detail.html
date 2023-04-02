@@ -1,14 +1,14 @@
 <div class="container mt-md-5">
     <div class="mb-3 order-1 order-md-0 mt-4 mt-md-0">
-        <h1 class="fs-3">HQH Sea View Apartment Nha Trang</h1>
+        <h1 class="fs-3">{{ roomDetail.name }}</h1>
 
         <span class="fw-semibold border border-start-0 border-bottom-0 border-top-0 px-1 border-dark-subtle">
             <i class="fa-solid fa-star"></i>
-            5.0
+            {{ roomDetail.rate }}
         </span>
 
         <span class="px-1">
-            Thành phố Nha Trang, Khánh Hòa, Việt Nam
+            {{ roomDetail.address }}
         </span>
     </div>
 
@@ -22,7 +22,7 @@
                 </div>
             </a> -->
 
-            <img width="100%" height="100%" src="assets/img/room/235d56fe-4241-4267-a24c-c70fdb4f8711.webp" alt=""
+            <img width="100%" height="100%" src="assets/img/room/{{ roomDetail.img }}" alt=""
                 class="rounded-md-4">
         </div>
     </div>
@@ -143,12 +143,12 @@
                 <div class="p-3 border rounded-4 shadow">
                     <div class="d-flex justify-content-between align-items-center">
                         <span class="">
-                            <span class="fw-semibold fs-4">$976 </span>/đêm
+                            <span class="fw-semibold fs-4">${{ roomDetail.price }}</span> /đêm
                         </span>
 
                         <span class="fw-semibold">
                             <i class="fa-solid fa-star"></i>
-                            5.0
+                            {{ roomDetail.rate }}
                         </span>
                     </div>
 
@@ -170,8 +170,8 @@
                     </div>
 
                     <div class="mt-4 btn-dat">
-                        <button class="rounded-3 border-0 text-white fw-semibold" onclick="location.href='#!/thanh-toan'">Đặt
-                            phòng</button>
+                        <!-- <button class="rounded-3 border-0 text-white fw-semibold" onclick="location.href='#!/thanh-toan/{{ roomDetail.id }}'">Đặt phòng</button> -->
+                        <a class="rounded-3 border-0 text-white fw-semibold text-center" href="#!/thanh-toan/{{ roomDetail.id }}">Đặt phòng</a>
                     </div>
 
                     <div class="mt-4 d-flex flex-column justify-content-between">
@@ -179,11 +179,11 @@
                             <div>
                                 <div class="d-flex justify-content-between mt-3">
                                     <div>
-                                        $976 x 2 đêm
+                                        ${{ roomDetail.price }} x 2 đêm
                                     </div>
 
                                     <div>
-                                        <span class="fw-semibold">$1.952</span>
+                                        <span class="fw-semibold">${{ roomDetail.price * 2 }}</span>
                                     </div>
                                 </div>
 
@@ -206,7 +206,7 @@
                                 </div>
 
                                 <div>
-                                    <span class="fw-semibold">$1.962</span>
+                                    <span class="fw-semibold">${{ roomDetail.price * 2 + 10 }}</span>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
     <div class="rate border-top py-5 mt-3 order-1 order-md-0">
         <h2 class="fs-4 mb-5">
             <i class="fa-solid fa-star"></i>
-            5.0 · 40 đánh giá
+            {{ roomDetail.rate }} · 40 đánh giá
         </h2>
 
         <div>

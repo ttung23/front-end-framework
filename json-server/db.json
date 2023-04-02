@@ -1,0 +1,183 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "age": "typicode"
+    },
+    {
+      "id": 2,
+      "name": "nana",
+      "age": "nana"
+    },
+    {
+      "name": "wwwww",
+      "age": "wwwuuuww",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "4444",
+      "age": "3333"
+    },
+    {
+      "id": 5,
+      "name": "2222",
+      "age": "2222"
+    },
+    {
+      "name": "wwtttaâ",
+      "age": "wwwttttaaa",
+      "id": 6
+    },
+    {
+      "name": "2222",
+      "age": "222",
+      "id": 7
+    },
+    {
+      "name": "999",
+      "age": "1999",
+      "id": 9
+    },
+    {
+      "name": "222",
+      "age": "222",
+      "id": 10
+    },
+    {
+      "name": "222555",
+      "id": 11
+    },
+    {
+      "name": "eeee",
+      "age": "eee",
+      "id": 12
+    },
+    {
+      "name": "ggg",
+      "age": "ggg",
+      "id": 13
+    },
+    {
+      "name": "AAAA",
+      "age": "222",
+      "id": 14
+    },
+    {
+      "name": "sbakja",
+      "age": "111333",
+      "id": 16
+    },
+    {
+      "name": "gsdgsf",
+      "age": "1111",
+      "id": 17
+    },
+    {
+      "name": "sss",
+      "age": "11",
+      "id": 18
+    },
+    {
+      "name": "sss",
+      "age": "11",
+      "id": 19
+    },
+    {
+      "name": "gdgsf",
+      "age": "11",
+      "id": 20
+    },
+    {
+      "name": "22",
+      "age": "22",
+      "id": 21
+    },
+    {
+      "name": "ff",
+      "age": "11",
+      "id": 22
+    },
+    {
+      "name": "fffffff",
+      "age": "2233",
+      "id": 23
+    }
+  ],
+  "room": [
+    {
+      "id": 1,
+      "name": "HQH Sea View Apartment Nha Trang",
+      "address": "Thành phố Nha Trang, Khánh Hòa, Việt Nam",
+      "price": 976,
+      "view": "View biển",
+      "img": "235d56fe-4241-4267-a24c-c70fdb4f8711.webp",
+      "rate": 4.9
+    },
+    {
+      "id": 2,
+      "name": "HQH Sea View Apartment Khánh Hòa",
+      "address": "Thành phố Nha Trang, Khánh Hòa, Việt Nam",
+      "price": 111,
+      "view": "View biển",
+      "img": "d682f7bf-caa4-4433-9038-c5f81a01845b.webp",
+      "rate": 4.9
+    },
+    {
+      "id": 3,
+      "name": "HQH Sea View Apartment Hà Nội",
+      "address": "Thành phố Nha Trang, Khánh Hòa, Việt Nam",
+      "price": 222,
+      "view": "View biển",
+      "img": "e6a0f29a-cafb-481a-8fae-c119352f9474.webp",
+      "rate": 4.9
+    },
+    {
+      "id": 4,
+      "name": "HQH Sea View Apartment Nha Trang",
+      "address": "Thành phố Nha Trang, Khánh Hòa, Việt Nam",
+      "price": 333,
+      "view": "View biển",
+      "img": "ec0aed18-0952-43f4-9c49-24a30eac40d3.webp",
+      "rate": 4.9
+    },
+    {
+      "id": 5,
+      "name": "HQH Sea View Apartment Nha Trang",
+      "address": "Thành phố Nha Trang, Khánh Hòa, Việt Nam",
+      "price": 444,
+      "view": "View biển",
+      "img": "e13caff8-ad01-4a11-836c-aa90848fc2b2.webp",
+      "rate": 4.9
+    }
+  ],
+  "order": [
+    {
+      "name": "11",
+      "address": "11",
+      "cccd": "11",
+      "email": "ntt091103@gmail.com",
+      "phone": "11",
+      "date": "2/4/2023",
+      "check_in": "2/4/2023",
+      "check_out": "2/4/2023",
+      "id_phong": 1,
+      "quantity_guests": 11,
+      "id": 1
+    },
+    {
+      "name": "Thêm cản than",
+      "address": "111",
+      "cccd": "11",
+      "email": "ntt091103@gmail.com",
+      "phone": "11",
+      "date": "2/4/2023",
+      "check_in": "2/4/2023",
+      "check_out": "2/4/2023",
+      "quantity_guests": 3,
+      "id_phong": "3",
+      "id": 2
+    }
+  ]
+}

@@ -1,11 +1,11 @@
-<p>Thông tin bảo hiểm cho {{ per }}</p>
-<table>
+<p class="fs-3 text-center fw-semibold">Thông tin bảo hiểm cho {{ per }}</p>
+<table class="table table-triped">
     <tr>
         <td>
             Họ tên
         </td>
         <td>
-            <input type="text" ng-model="inputValue.name">
+            <input type="text" ng-model="inputValue.name" class="form-control">
         </td>
         <td>
             <p ng-if="checkData.name" style="color: red;">Chưa nhập tên</p>
@@ -23,7 +23,7 @@
             <input type="radio" value="2" ng-model="inputValue.gender">
         </td>
         <td>
-            <p ng-if="checkData.gender" style="color: red;">Chưa nhập tên</p>
+            <p ng-if="checkData.gender" style="color: red;">Chưa chọn giới tính</p>
         </td>
     </tr>
 
@@ -32,14 +32,15 @@
             Cấp bậc
         </td>
         <td>
-            <select ng-model="inputValue.level">
+            <select ng-model="inputValue.level" class="form-select"> 
+                <option value="">Chọn cấp bậc</option>
                 <option value="1">Bậc 1</option>
                 <option value="2">Bậc 2</option>
                 <option value="3">Bậc 3</option>
             </select>
         </td>
         <td>
-            <p ng-if="checkData.level" style="color: red;">Chưa nhập tên</p>
+            <p ng-if="checkData.level" style="color: red;">Chưa chọn cấp bậc</p>
         </td>
     </tr>
 
@@ -48,15 +49,15 @@
             Số ngày nằm viện
         </td>
         <td>
-            <input type="text" ng-model="inputValue.dayCount">
+            <input type="text" ng-model="inputValue.dayCount" class="form-control">
         </td>
         <td>
-            <p ng-if="checkData.dayCount" style="color: red;">Chưa nhập tên</p>
+            <p ng-if="checkData.dayCount" style="color: red;">Chưa nhập số ngày nằm viện</p>
         </td>
     </tr>
 
     <tr>
-        <td><button ng-click="check()">Kiểm tra</button></td>
+        <td><button class="btn btn-primary" ng-click="check()">Kiểm tra</button></td>
     </tr>
     <tr ng-if="show">
         <td colspan="2">

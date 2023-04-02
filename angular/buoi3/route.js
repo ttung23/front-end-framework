@@ -10,10 +10,15 @@ app.config(function ($routeProvider) {
             controller: HomeController,
             title: "Trang chủ"
         })
-        .when('/gioi-thieu/:name', { // name là 1 OBJECT chứa các giá trị của param trên URL
+        .when('/gioi-thieu', { // name là 1 OBJECT chứa các giá trị của param trên URL
             templateUrl: "views/about.html",
             controller: AboutController,
             title: "Giới thiệu"
+        })
+        .when('/luyen-tap', {
+            templateUrl: "views/luyenTap.html",
+            controller: LuyentapController,
+            title: "Bài tập luyện tập"
         })
 })
 

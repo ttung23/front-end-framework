@@ -1,6 +1,6 @@
 <div class="container mt-5">
     <div class="title d-md-flex align-items-center mb-5 d-none">
-        <a href="#!/chi-tiet" class="text-decoration-none me-4">
+        <a href="#!/chi-tiet/{{ roomPay.id }}" class="text-decoration-none me-4">
             <i class="fa-solid fa-chevron-left text-black"></i>
         </a>
         <h2 class="m-0 fs-3">Xác nhận và thanh toán</h2>
@@ -8,7 +8,7 @@
 
     <div class="row py-4 d-md-none">
         <div class="col-4">
-            <img width="100%" src="assets/img/room/235d56fe-4241-4267-a24c-c70fdb4f8711.webp" class="rounded-3" alt="">
+            <img width="100%" src="assets/img/room/{{ roomPay.img }}" class="rounded-3" alt="">
         </div>
 
         <div class="col-8 d-flex">
@@ -20,7 +20,7 @@
                 <div class="" style="font-size: 14px;">
                     <span class="fw-semibold">
                         <i class="fa-solid fa-star"></i>
-                        5.0
+                        50.0
                     </span>
                     <span class="text-secondary">
                         (50 đánh giá)
@@ -38,11 +38,11 @@
 
                     <div class="d-flex justify-content-between mt-3">
                         <div>
-                            $976 x 2 đêm
+                            ${{ roomPay.price }} x 2 đêm
                         </div>
 
                         <div>
-                            <span class="fw-semibold">$1.952</span>
+                            <span class="fw-semibold">${{ roomPay.price * 2 }}</span>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@
                     </div>
 
                     <div>
-                        <span class="fw-semibold">$1.962</span>
+                        <span class="fw-semibold">${{ roomPay.price * 2 + 10 }}</span>
                     </div>
                 </div>
             </div>
@@ -79,27 +79,27 @@
                     <h2 class="fs-4 mb-4">Lịch trình của bạn</h2>
 
                     <div>
-                        <div class="d-flex justify-content-between align-items-center pb-3">
-                            <div>
-                                <p class="m-0 fw-semibold mb-2">Ngày</p>
-                                <span>11/11/2011 - 22/2/2022</span>
+                        <div class="row align-items-center pb-3">
+                            <div class="col-6">
+                                <p class="m-0 fw-semibold mb-2">Check-in</p>
+                                <span><input ng-style="checkData.check_in && {'border-color': 'red'}" class="form-control" type="date" min="1997-01-01" max="2030-12-31" ng-model="inputValue.check_in"></span>
+                                <span ng-if="checkData.check_in" class="ps-2 text-danger">*Hãy chọn ngày nhận phòng</span>
                             </div>
 
-                            <div>
-                                <button class="border-0 bg-white text-decoration-underline fw-semibold">Chỉnh
-                                    sửa</button>
+                            <div class="col-6">
+                                <p class="m-0 fw-semibold mb-2">Check-out</p>
+                                <span><input class="form-control" type="date" value="2023-04-02"
+                                        ng-model="inputValue.check_out" ng-style="checkData.check_out && {'border-color': 'red'}"></span>
+                                <span ng-if="checkData.check_out" class="ps-2 text-danger">*Hãy chọn ngày trả phòng</span>
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="row align-items-center pb-3">
                             <div>
-                                <p class="m-0 fw-semibold mb-2">Số lượng</p>
-                                <span>2 khách</span>
-                            </div>
-
-                            <div>
-                                <button class="border-0 bg-white text-decoration-underline fw-semibold">Chỉnh
-                                    sửa</button>
+                                <p class="m-0 fw-semibold mb-2">Số lượng khách</p>
+                                <input type="number" min="1" class="form-control" placeholder="Nhập số lượng khách"
+                                    ng-model="inputValue.quantity_guests" ng-style="checkData.quantity_guests && {'border-color': 'red'}">
+                                <span ng-if="checkData.quantity_guests" class="ps-2 text-danger">*Hãy nhập số lượng khách hàng</span>
                             </div>
                         </div>
                     </div>
@@ -111,46 +111,64 @@
 
                     <div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="1">
+                            <input type="text" class="form-control" id="name" placeholder="1"
+                                ng-model="inputValue.name" ng-style="checkData.name && {'border-color': 'red'}">
                             <label for="name">Họ và tên</label>
+                            <span ng-if="checkData.name" class="ps-2 text-danger">*Hãy nhập họ tên</span>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="cccd" placeholder="1">
+                            <input type="text" class="form-control" id="address" placeholder="1"
+                                ng-model="inputValue.address" ng-style="checkData.address && {'border-color': 'red'}">
+                            <label for="address">Địa chỉ</label>
+                            <span ng-if="checkData.address" class="ps-2 text-danger">*Hãy nhập địa chỉ</span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="cccd" placeholder="1"
+                                ng-model="inputValue.cccd" ng-style="checkData.cccd && {'border-color': 'red'}">
                             <label for="cccd">Số chứng minh thư</label>
+                            <span ng-if="checkData.cccd || checkData.cccdFomat" class="ps-2 text-danger">{{ checkData.cccd ? "*Hãy nhập số căn cước" : "*Sai định dạng căn cước" }}</span>
                         </div>
 
                         <div class="row g-2">
                             <div class="col-md">
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="email" placeholder="1">
+                                    <input type="email" class="form-control" id="email" placeholder="1"
+                                        ng-model="inputValue.email" ng-style="checkData.email && {'border-color': 'red'}">
                                     <label for="email">Email</label>
+                                    <span ng-if="checkData.email || checkData.emailFomat" class="ps-2 text-danger">{{ checkData.email ? "*Hãy nhập email" : "*Sai định dạng Email" }}</span>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="phone" placeholder="1">
+                                    <input type="text" class="form-control" id="phone" placeholder="1"
+                                        ng-model="inputValue.phone" ng-style="checkData.phone && {'border-color': 'red'}">
                                     <label for="phone">Số điện thoại</label>
+                                    <span ng-if="checkData.phone || checkData.phoneFomat" class="ps-2 text-danger">{{ checkData.phone ? "*Hãy nhập số điện thoại" : "*Sai định dạng số điện thoại" }}</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="date" class="form-control" id="date" placeholder="1">
+                            <input type="date" class="form-control" id="date" placeholder="1"
+                                ng-model="inputValue.date" ng-style="checkData.date && {'border-color': 'red'}">
                             <label for="date">Ngày sinh</label>
+                            <span ng-if="checkData.date" class="ps-2 text-danger">*Hãy nhập ngày sinh</span>
                         </div>
 
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>Hình thức thanh toán</option>
+                            <select class="form-select" id="floatingSelect" ng-model="inputValue.payment"
+                                ng-style="checkData.payment && {'border-color': 'red'}">
                                 <option value="1">Thanh toán online</option>
                                 <option value="2">Thanh toán khi nhận phòng</option>
                             </select>
-                            <label for="floatingSelect">Works with selects</label>
+                            <label for="floatingSelect">Hình thức thanh toán</label>
+                            <span ng-if="checkData.payment" class="ps-2 text-danger">*Hãy chọn phương thức thanh toán</span>
                         </div>
 
                         <div class="mt-5">
-                            <button class="btn-pay border-0 text-white rounded-3">Xác nhận và thanh
+                            <button class="btn-pay border-0 text-white rounded-3" ng-click="pay()">Xác nhận và thanh
                                 toán</button>
                         </div>
                     </div>
@@ -163,20 +181,19 @@
                 <div class="p-3 border rounded-4">
                     <div class="row">
                         <div class="col-4">
-                            <img width="100%" src="assets/img/room/235d56fe-4241-4267-a24c-c70fdb4f8711.webp"
-                                class="rounded-3" alt="">
+                            <img width="100%" src="assets/img/room/{{ roomPay.img }}" class="rounded-3" alt="">
                         </div>
 
                         <div class="col-8 d-flex">
                             <div class="d-flex flex-column justify-content-between">
                                 <div>
-                                    <p class="fs-6">Căn hộ của Tùng Căn hộ của Tùng Căn hộ của Tùng</p>
+                                    <p class="fs-6">{{ roomPay.name }}</p>
                                 </div>
 
                                 <div class="" style="font-size: 14px;">
                                     <span class="fw-semibold">
                                         <i class="fa-solid fa-star"></i>
-                                        5.0
+                                        {{ roomPay.rate }}
                                     </span>
                                     <span class="text-secondary">
                                         (50 đánh giá)
@@ -195,11 +212,11 @@
 
                                 <div class="d-flex justify-content-between mt-3">
                                     <div>
-                                        $976 x 2 đêm
+                                        ${{ roomPay.price }} x 2 đêm
                                     </div>
 
                                     <div>
-                                        <span class="fw-semibold">$1.952</span>
+                                        <span class="fw-semibold">${{ roomPay.price * 2 }}</span>
                                     </div>
                                 </div>
 
@@ -222,7 +239,7 @@
                                 </div>
 
                                 <div>
-                                    <span class="fw-semibold">$1.962</span>
+                                    <span class="fw-semibold">${{ roomPay.price * 2 + 10 }}</span>
                                 </div>
                             </div>
                         </div>
@@ -230,5 +247,38 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="mt-5 pt-5">
+        <h4>Lịch sử đặt hàng</h4>
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>ID</th>
+                <th>Họ tên</th>
+                <th>Địa chỉ</th>
+                <th>Số căn cước</th>
+                <th>Email</th>
+                <th>Điện thoại</th>
+                <th>Ngày sinh</th>
+                <th>Check in</th>
+                <th>Check out</th>
+                <th>ID phòng</th>
+                <th>Số lượng</th>
+            </tr>
+
+            <tr ng-repeat="value in orderList">
+                <td>{{ value.id }}</td>
+                <td>{{ value.name }}</td>
+                <td>{{ value.address }}</td>
+                <td>{{ value.cccd }}</td>
+                <td>{{ value.email }}</td>
+                <td>{{ value.phone }}</td>
+                <td>{{ value.date }}</td>
+                <td>{{ value.check_in }}</td>
+                <td>{{ value.check_out }}</td>
+                <td>{{ value.id_phong }}</td>
+                <td>{{ value.quantity_guests }}</td>
+            </tr>
+        </table>
     </div>
 </div>

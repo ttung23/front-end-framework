@@ -50,11 +50,12 @@
     font-size: 14px;
 }
 
-.btn-dat > button {
+.btn-dat > a {
     display: block;
     width: 100%;
     padding: 12px 24px;
     background-color: rgba(73,179,232,1.00);
+    text-decoration: none;
 }
 
 .service {

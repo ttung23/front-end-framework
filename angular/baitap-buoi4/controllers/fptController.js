@@ -7,16 +7,16 @@ window.fptController = function ($scope, $routeParams) {
     }
 
     switch ($routeParams.chucvu) {
-        case 'nhanVien':
+        case 'nhan-vien':
             $scope.per = "nhân viên";
             $scope.tien = [700, 1200, 2400];
             break;
-        case 'canBo':
+        case 'can-bo':
             $scope.per = "cán bộ";
             $scope.tien = [1000, 2000, 3000];
             break;
-        case 'quanLy':
-            $scope.per = "quan lý";
+        case 'quan-ly':
+            $scope.per = "quản lý";
             $scope.tien =  [2000, 4000, 6000];
             break;
     }
@@ -24,6 +24,30 @@ window.fptController = function ($scope, $routeParams) {
     $scope.show = false;
 
     $scope.check = () => {
+
+        if (!$scope.inputValue || !$scope.inputValue.name) {
+            $scope.checkData.name = true;
+        } else if ($scope.inputValue || $scope.inputValue.name) {
+            $scope.checkData.name = false;
+        }
+
+        if (!$scope.inputValue || !$scope.inputValue.gender) {
+            $scope.checkData.gender = true;
+        } else if ($scope.inputValue || $scope.inputValue.gender) {
+            $scope.checkData.gender = false;
+        }
+
+        if (!$scope.inputValue || !$scope.inputValue.level) {
+            $scope.checkData.level = true;
+        } else if ($scope.inputValue || $scope.inputValue.level) {
+            $scope.checkData.level = false;
+        }
+
+        if (!$scope.inputValue || !$scope.inputValue.dayCount) {
+            $scope.checkData.dayCount = true;
+        } else if ($scope.inputValue || $scope.inputValue.dayCount) {
+            $scope.checkData.dayCount = false;
+        }
 
         $scope.result = {};
 
