@@ -126,16 +126,16 @@
 
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="cccd" placeholder="1"
-                                ng-model="inputValue.cccd" ng-style="checkData.cccd && {'border-color': 'red'}">
-                            <label for="cccd">Số chứng minh thư</label>
-                            <span ng-if="checkData.cccd || checkData.cccdFomat" class="ps-2 text-danger">{{ checkData.cccd ? "*Hãy nhập số căn cước" : "*Sai định dạng căn cước" }}</span>
+                                ng-model="inputValue.cccd" ng-style="checkData.cccd || checkData.cccdFomat ? {'border-color': 'red'} : {'border-color': '#dee2e6'}">
+                            <label for="cccd">Số chứng minh căn cước công dân</label>
+                            <span ng-if="checkData.cccd || checkData.cccdFomat" class="ps-2 text-danger">{{ checkData.cccd ? "*Hãy nhập số căn cước công dân" : "*Sai định dạng căn cước công dân" }}</span>
                         </div>
 
                         <div class="row g-2">
                             <div class="col-md">
                                 <div class="form-floating mb-3">
                                     <input type="email" class="form-control" id="email" placeholder="1"
-                                        ng-model="inputValue.email" ng-style="checkData.email && {'border-color': 'red'}">
+                                        ng-model="inputValue.email" ng-style="checkData.email || checkData.emailFomat ? {'border-color': 'red'} : {'border-color': '#dee2e6'}">
                                     <label for="email">Email</label>
                                     <span ng-if="checkData.email || checkData.emailFomat" class="ps-2 text-danger">{{ checkData.email ? "*Hãy nhập email" : "*Sai định dạng Email" }}</span>
                                 </div>
@@ -143,7 +143,7 @@
                             <div class="col-md">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="phone" placeholder="1"
-                                        ng-model="inputValue.phone" ng-style="checkData.phone && {'border-color': 'red'}">
+                                        ng-model="inputValue.phone" ng-style="checkData.phone || checkData.phoneFomat ? {'border-color': 'red'} : {'border-color': '#dee2e6'}">
                                     <label for="phone">Số điện thoại</label>
                                     <span ng-if="checkData.phone || checkData.phoneFomat" class="ps-2 text-danger">{{ checkData.phone ? "*Hãy nhập số điện thoại" : "*Sai định dạng số điện thoại" }}</span>
                                 </div>

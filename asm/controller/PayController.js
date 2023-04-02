@@ -21,38 +21,54 @@ window.PayController = function ($scope, $routeParams, $http) {
     }
     $scope.getData();
 
-    $scope.checkData = {
-        name: false,
-        address: false,
-        cccd: false,
-        cccdFomat: false,
-        email: false,
-        emailFomat: false,
-        phone: false,
-        phoneFomat: false,
-        date: false,
-        check_in: false,
-        check_out: false,
-        quantity_guests: false,
-        payment: false
-    }
-
     $scope.pay = function () {
+        $scope.checkData = {
+            name: false,
+            address: false,
+            cccd: false,
+            cccdFomat: false,
+            email: false,
+            emailFomat: false,
+            phone: false,
+            phoneFomat: false,
+            date: false,
+            check_in: false,
+            check_out: false,
+            quantity_guests: false,
+            payment: false
+        }
+
         let flag = false;
+        const reg_email = /^\w+@[a-zA-Z]+\.\w{2,}(\.\w{2,})?$/i;
+
+        const reg_phone = /^(?:\+84|0)[3|5|7|8|9]\d{8}$/;
+
+        const reg_cccd = /^\d{12}$/;
         
         // validate
         $scope.checkData.name = !$scope.inputValue || !$scope.inputValue.name;
         $scope.checkData.address = !$scope.inputValue || !$scope.inputValue.address;
         $scope.checkData.cccd = !$scope.inputValue || !$scope.inputValue.cccd;
+        if (!$scope.checkData.cccd) {
+            if (!reg_cccd.test($scope.inputValue.cccd)) {
+                $scope.checkData.cccdFomat = true;
+            }
+        }
+
         $scope.checkData.email = !$scope.inputValue || !$scope.inputValue.email;
         if (!$scope.checkData.email) {
-            if ($scope.inputValue.email == /!$scope.inputValue || !$scope.inputValue.email/) {
-                console.log(111);
+            if (!reg_email.test($scope.inputValue.email)) {
                 $scope.checkData.emailFomat = true;
             }
         }
 
         $scope.checkData.phone = !$scope.inputValue || !$scope.inputValue.phone;
+        if (!$scope.checkData.phone) {
+            if (!reg_phone.test($scope.inputValue.phone)) {
+                $scope.checkData.phoneFomat = true;
+            }
+        }
+
         $scope.checkData.date = !$scope.inputValue || !$scope.inputValue.date;
         $scope.checkData.check_in = !$scope.inputValue || !$scope.inputValue.check_in;
         $scope.checkData.check_out = !$scope.inputValue || !$scope.inputValue.check_out;
