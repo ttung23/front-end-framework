@@ -102,7 +102,7 @@ window.PayController = function ($scope, $routeParams, $http) {
             ).then(
                 function (reponse) {
                     if (reponse.status == 201) {
-                        $scope.getData()
+                        $scope.getData();
                     }
                 }
             )
@@ -122,7 +122,7 @@ window.PayController = function ($scope, $routeParams, $http) {
             check_in: "",
             check_out: "",
             quantity_guests: "",
-        }
+        };
 
         $scope.editId = 0;
     }

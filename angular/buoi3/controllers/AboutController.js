@@ -55,18 +55,18 @@ window.AboutController = function ($scope, $routeParams, $http) {
                     
                 // }
 
-                const up = {
+                const updateItem = {
                     name: $scope.inputValue.name,
                     age: $scope.inputValue.age
                 }
 
                 $http.put (
-                    apiURL + "/" + editId, 
-                    up
+                    apiURL + "/" + editId, // đường link cập nhật theo ID
+                    updateItem // dữ liệu dùng để update
                 ).then(
                     function (reponse) {
                         if (reponse.status == 200) {
-                            $scope.getData()
+                            $scope.getData(); // gọi lại hàm getData để update lại bảng
                         }
                     }
                 )
@@ -119,7 +119,7 @@ window.AboutController = function ($scope, $routeParams, $http) {
         //     name: "",
         //     age: ""
         // }
-        $scope.inputValue = {}
+        // $scope.inputValue = {}
 
         // for (let i = 0; i < $scope.danhsach.length; i++) {
         //     if ($scope.danhsach[i].id == editId) {
@@ -128,11 +128,15 @@ window.AboutController = function ($scope, $routeParams, $http) {
         //     }
         // }
 
+        // gọi API để lấy dữ theo editID và đổ dữ liệu lên form
         $http.get(
             apiURL + "/" + editId, // đường dẫn API tạo ở trên
         ).then(
             function (reponse) {
-                $scope.inputValue = reponse.data
+                // bắt trạng thái thành công
+                if (reponse.status == 200) {
+                    $scope.inputValue = reponse.data;
+                }
 
                 // console.log($scope.inputValue.name);
                 // console.log(reponse.data);

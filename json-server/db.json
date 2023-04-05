@@ -6,9 +6,9 @@
       "age": "typicode"
     },
     {
-      "id": 2,
       "name": "nana",
-      "age": "nana"
+      "age": "nanaNU",
+      "id": 2
     },
     {
       "name": "wwwww",
@@ -16,9 +16,9 @@
       "id": 3
     },
     {
-      "id": 4,
       "name": "4444",
-      "age": "3333"
+      "age": "3333555",
+      "id": 4
     },
     {
       "id": 5,
@@ -101,7 +101,7 @@
     },
     {
       "name": "fffffff",
-      "age": "2233",
+      "age": "22334444",
       "id": 23
     }
   ],
@@ -178,6 +178,32 @@
       "quantity_guests": 3,
       "id_phong": "3",
       "id": 2
+    },
+    {
+      "name": "Tùng Nguyễn",
+      "address": "Hà Nội",
+      "cccd": "11",
+      "email": "ntt091103@gmail.com",
+      "phone": "0396007890",
+      "date": "2/4/2023",
+      "check_in": "2/4/2023",
+      "check_out": "3/4/2023",
+      "quantity_guests": 2,
+      "id_phong": "3",
+      "id": 3
+    },
+    {
+      "name": "Tùng Nguyễn",
+      "address": "Hà Nội",
+      "cccd": "111111111111",
+      "email": "ntt091103@gmail.com",
+      "phone": "0396007890",
+      "date": "2/4/2023",
+      "check_in": "2/4/2023",
+      "check_out": "8/4/2023",
+      "quantity_guests": 2,
+      "id_phong": "3",
+      "id": 4
     }
   ]
 }
