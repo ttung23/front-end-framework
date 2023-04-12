@@ -1,0 +1,46 @@
+{
+  "thithu": [
+    {
+      "id": 1,
+      "name": "tung",
+      "price": 1111,
+      "categoryName": "aaa"
+    },
+    {
+      "name": "đầ",
+      "price": 11,
+      "categoryName": "111",
+      "id": 2
+    },
+    {
+      "name": "jgioeghrw",
+      "price": 11111,
+      "categoryName": "111",
+      "id": 3
+    },
+    {
+      "name": "hdagja",
+      "price": 111,
+      "categoryName": "111",
+      "id": 4
+    },
+    {
+      "name": "iwahg",
+      "price": 11,
+      "categoryName": "11",
+      "id": 5
+    },
+    {
+      "name": "sua",
+      "price": 1122,
+      "categoryName": "89",
+      "id": 6
+    },
+    {
+      "name": "thme cai nua",
+      "price": 11,
+      "categoryName": "11",
+      "id": 7
+    }
+  ]
+}

@@ -126,4 +126,20 @@ window.PayController = function ($scope, $routeParams, $http) {
 
         $scope.editId = 0;
     }
+
+    $scope.onDelete = function (id) {
+        let confirm = window.confirm("Bạn chắc chắn muốn hủy đặt phòng?");
+
+        if (confirm) {
+            $http.delete(
+                api_order + "/" + id
+            ).then(
+                function (reponse) {
+                    if (reponse.status == 200) {
+                        $scope.getData();
+                    }
+                }
+            )
+        }
+    }
 }

@@ -264,6 +264,7 @@
                 <th>Check out</th>
                 <th>ID phòng</th>
                 <th>Số lượng</th>
+                <th>Thao tác</th>
             </tr>
 
             <tr ng-repeat="value in orderList">
@@ -278,6 +279,7 @@
                 <td>{{ value.check_out }}</td>
                 <td>{{ value.id_phong }}</td>
                 <td>{{ value.quantity_guests }}</td>
+                <td><button ng-click="onDelete(value.id)" class="btn btn-danger">Hủy</button></td>
             </tr>
         </table>
     </div>

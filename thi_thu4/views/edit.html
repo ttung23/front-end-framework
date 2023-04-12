@@ -1,0 +1,34 @@
+<h1 class="text-center">Quản lý tác giả</h1>
+<table class="table">
+    <tr>
+        <td><label for="" class="form-label">Tên</label></td>
+        <td><input type="text" class="form-control" ng-model="inputValue.ten"></td>
+        <td><span ng-if="checkData.ten" class="text-danger">*Chua nhap ten</span></td>
+    </tr>
+
+    <tr>
+        <td><label for="" class="form-label">Giới tính</label></td>
+        <td>
+            <input type="radio" value="true" class="" ng-model="inputValue.gioiTinh">Nam
+            <br>
+            <input type="radio" value="false" class="" ng-model="inputValue.gioiTinh" checked>Nữ
+        </td>
+    </tr>
+
+    <tr>
+        <td><label for="" class="form-label">Địa chỉ</label></td>
+        <td><input type="text" class="form-control" ng-model="inputValue.diaChi"></td>
+        <td><span ng-if="checkData.diaChi" class="text-danger">*Chua nhap dia chi</span></td>
+    </tr>
+
+    <tr>
+        <td><label for="" class="form-label">Tuổi</label></td>
+        <td><input type="text" class="form-control" ng-model="inputValue.tuoi"></td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <button ng-click="onEdit()" class="btn btn-success">Edit</button>
+        </td>
+    </tr>
+</table>

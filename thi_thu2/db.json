@@ -1,0 +1,22 @@
+{
+  "thithu": [
+    {
+      "id": 1,
+      "name": "tung",
+      "price": 111,
+      "categoryName": "aaa"
+    },
+    {
+      "name": "aaa",
+      "price": 222,
+      "categoryName": "333",
+      "id": 3
+    },
+    {
+      "name": "bbb",
+      "price": 222,
+      "categoryName": "33445566",
+      "id": 4
+    }
+  ]
+}
